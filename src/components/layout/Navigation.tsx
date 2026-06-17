@@ -79,6 +79,7 @@ export default function Navigation() {
 
       <style>{`
         @media (max-width: 880px) {
+          .nav-links { display: none !important; }
           .mobile-menu-btn { display: block !important; }
         }
       `}</style>
