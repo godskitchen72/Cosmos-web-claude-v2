@@ -10,7 +10,7 @@ const queueRows = [
 
 export default function HeroSection() {
   return (
-    <section className="section" style={{ minHeight: '92vh', display: 'flex', alignItems: 'center', paddingTop: '7rem' }}>
+    <section className="section" style={{ minHeight: '92vh', display: 'flex', alignItems: 'center', paddingTop: '11rem' }}>
       <div className="container hero-grid">
         {/* Left: copy */}
         <div>

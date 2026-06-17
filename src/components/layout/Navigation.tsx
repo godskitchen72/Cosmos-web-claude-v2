@@ -29,18 +29,21 @@ export default function Navigation() {
         transition: 'all 0.25s ease',
       }}
     >
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px', padding: '0 1.5rem' }}>
-        <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
+      {/* Logo banner row — full width, own row above links */}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '0.75rem 1.5rem 0.5rem' }}>
+        <a href="/" style={{ display: 'block', maxWidth: '380px', width: '100%' }}>
           <Image
             src="/cosmos-logo.png"
             alt="Cosmos Medical Technologies"
-            width={260}
-            height={73}
-            style={{ width: 'auto', height: '46px', objectFit: 'contain' }}
+            width={1823}
+            height={863}
+            style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
             priority
           />
         </a>
+      </div>
 
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '60px', padding: '0 1.5rem', borderTop: '1px solid rgba(0,212,255,0.08)' }}>
         <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           {navItems.map((item) => (
             <a key={item} href="#" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>
@@ -56,7 +59,7 @@ export default function Navigation() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          style={{ display: 'none', background: 'transparent', border: 'none', color: '#fff' }}
+          style={{ display: 'none', background: 'transparent', border: 'none', color: '#fff', marginLeft: 'auto' }}
           className="mobile-menu-btn"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
