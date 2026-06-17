@@ -61,7 +61,7 @@ export default function HeroSection() {
           }}>
             <span style={{ fontSize: '0.85rem', fontWeight: 600 }}>Front Desk Dashboard</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.7rem', color: '#4ade80' }}>
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ade80', display: 'inline-block' }} />
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4ade80', display: 'inline-block', flexShrink: 0, marginTop: 1 }} />
               Live
             </span>
           </div>
