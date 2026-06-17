@@ -23,24 +23,30 @@ export default function Navigation() {
         left: 0,
         right: 0,
         zIndex: 100,
-        background: scrolled ? 'rgba(4,14,32,0.95)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(0,212,255,0.1)' : '1px solid transparent',
-        transition: 'all 0.25s ease',
+        background: '#000000',
+        borderBottom: '1px solid rgba(0,212,255,0.1)',
       }}
     >
-      {/* Logo banner row — full width, own row above links */}
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '0.6rem 1.5rem 0.4rem' }}>
+      {/* Top row: logo + hamburger (hamburger only visible on mobile via media query below) */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.6rem 1.5rem 0.4rem' }}>
         <a href="/" style={{ display: 'block' }}>
           <Image
-            src="/cosmos-logo.png"
+            src="/cosmos-logo-final.png"
             alt="Cosmos Medical Technologies"
-            width={1823}
-            height={863}
-            style={{ height: '56px', width: 'auto', maxWidth: '100%', objectFit: 'contain' }}
+            width={1285}
+            height={310}
+            style={{ height: '52px', width: 'auto', maxWidth: '100%', objectFit: 'contain' }}
             priority
           />
         </a>
+
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          style={{ display: 'none', background: 'transparent', border: 'none', color: '#fff' }}
+          className="mobile-menu-btn"
+        >
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '60px', padding: '0 1.5rem', borderTop: '1px solid rgba(0,212,255,0.08)' }}>
@@ -56,18 +62,10 @@ export default function Navigation() {
           <button className="btn-secondary" style={{ padding: '0.6rem 1.3rem', fontSize: '0.85rem' }}>Contact Sales</button>
           <button className="btn-primary" style={{ padding: '0.6rem 1.3rem', fontSize: '0.85rem' }}>Request Demo</button>
         </div>
-
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          style={{ display: 'none', background: 'transparent', border: 'none', color: '#fff', marginLeft: 'auto' }}
-          className="mobile-menu-btn"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
 
       {mobileOpen && (
-        <div style={{ background: 'rgba(4,14,32,0.98)', padding: '1rem 1.5rem 1.5rem', borderTop: '1px solid rgba(0,212,255,0.1)' }}>
+        <div style={{ background: '#000000', padding: '1rem 1.5rem 1.5rem', borderTop: '1px solid rgba(0,212,255,0.1)' }}>
           {navItems.map((item) => (
             <a key={item} href="#" style={{ display: 'block', padding: '0.6rem 0', color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}>
               {item}
