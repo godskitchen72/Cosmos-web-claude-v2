@@ -49,7 +49,7 @@ export default function Navigation() {
         </button>
       </div>
 
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '60px', padding: '0 1.5rem', borderTop: '1px solid rgba(0,212,255,0.08)' }}>
+      <div className="container nav-second-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '60px', padding: '0 1.5rem', borderTop: '1px solid rgba(0,212,255,0.08)' }}>
         <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           {navItems.map((item) => (
             <a key={item} href="#" style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500 }}>
@@ -82,6 +82,7 @@ export default function Navigation() {
         @media (max-width: 880px) {
           .nav-links { display: none !important; }
           .mobile-menu-btn { display: block !important; }
+          .nav-second-row { height: 0 !important; border-top: none !important; padding: 0 !important; overflow: hidden; }
         }
       `}</style>
     </nav>
