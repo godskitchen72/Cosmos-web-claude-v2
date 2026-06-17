@@ -14,7 +14,9 @@ export default function TrustSection() {
       <div className="container" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
         {badges.map(({ icon: Icon, label }) => (
           <div key={label} className="trust-badge">
-            <Icon size={16} style={{ color: '#00b8ff' }} />
+            <span style={{ width: 20, height: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <Icon size={16} style={{ color: '#00b8ff' }} />
+            </span>
             {label}
           </div>
         ))}
