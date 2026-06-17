@@ -30,14 +30,14 @@ export default function Navigation() {
       }}
     >
       {/* Logo banner row — full width, own row above links */}
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '0.75rem 1.5rem 0.5rem' }}>
-        <a href="/" style={{ display: 'block', maxWidth: '380px', width: '100%' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '0.6rem 1.5rem 0.4rem' }}>
+        <a href="/" style={{ display: 'block' }}>
           <Image
             src="/cosmos-logo.png"
             alt="Cosmos Medical Technologies"
             width={1823}
             height={863}
-            style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+            style={{ height: '56px', width: 'auto', maxWidth: '100%', objectFit: 'contain' }}
             priority
           />
         </a>
